@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <!--Fonts-->
+    <link rel="stylesheet" href="fonts/graphik-lcg/stylesheet.css">
+    <!--Reset CSS-->
+    <link rel="stylesheet" href="../../crews/app/css/reset.css">
+    <!--Styles CSS-->
+    <link rel="stylesheet" href="../../crews/app/css/style.css">
+    <title>Crews</title>
+</head>
+
+<body>
+    <div class="crews">
+        <div class="crews__inner">
+            <div class="left-side">
+                <div class="top">
+                    <a class="top-logo" href="#">
+                        <img class="top-logo__img" src="../../crews/app/images/crew/left-side/logo.png" alt="logo">
+                      
+                    </a>
+                    <div class="share-select">
+                        <select class="select">
+                            <option class="select__option">CAH</option>
+                            <option class="select__option">TSL</option>
+                        </select>
+                    </div>
+                </div>
+                <nav class="navigation">
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#">Tasks</a>
+                            <ul class="navigation-submenu">
+                                <li class="navigation-submenu__item">
+                                    <a class="navigation-submenu__link" href="#">Active Tasks</a>
+                                </li>
+                                <li class="navigation-submenu__item">
+                                    <a class="navigation-submenu__link" href="#">Archived</a>
+                                </li>
+                                <li class="navigation-submenu__item">
+                                    <a class="navigation-submenu__link" href="#">Deleted</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#">Workers</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link navigation__link--active" href="#">Projects</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a class="navigation__link" href="#">Reports</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="questions" style="background: url('../../crews/app/images/crew/left-side/questions.png')no-repeat top center / cover">
+                    <div class="questions__header">
+                        <h3 class="questions__header-title">Have questions?</h3>
+                        <img class="questions__header-tooltip-icon" src="../../crews/app/images/crew/left-side/tooltip-icon.png" alt="tooltip-icon">
+                    </div>
+                    <div class="questions__box">
+                        <ul class="questions__box-inner">
+                            <li class="questions__box-item">
+                                Check our
+                                <a class="questions__box-link" href="#">FAQ's</a>
+                            </li>
+                            <li class="questions__box-item">
+                                Watch demo video
+                                <a class="questions__box-link" href="#">here</a>
+                            </li>
+                            <li class="questions__box-item">
+                                or contact us at by
+                                <a class="questions__box-link" href="#">email</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="profile">
+                    <div class="profile__logo">
+                        <img class="profile__ava" src="../../crews/app/images/crew/left-side/ava.png" alt="ava">
+                    </div>
+                    <div class="profile__user">
+                        <p class="profile__user-name">Marvin McKinney</p>
+                        <p class="profile__user-surname">Cahill</p>
+                    </div>
+                    <div class="profile__arrow">
+                        <img class="profile__arrow-icon" src="../../crews/app/images/crew/left-side/arrow-profile.png" alt="arrow"></img>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="projects-header">
+                    <h1 class="projects-header__title">Projects</h1>
+                    <button class="projects-header__btn">
+                        <img class="projects-header__btn-icon" src="../../crews/app/images/crew/content/plus.png" alt="plus">
+                        <p class="projects-header__btn-text">New Project</p>
+                    </button>
+                </div>
+                <div class="projects-content">
+                    <table class="table">
+                        <thead class="table__header">
+                            <tr class="table__header-tr">
+                                <th class="table__header-cell table__header-cell--rounded-left">Name</th>
+                                <th class="table__header-cell">Location</th>
+                                <th class="table__header-cell">Timezone</th>
+                                <th class="table__header-cell table__header-cell--rounded-right">Tasks</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table__body">
+                            <tr class="table__body-tr">
+                                <td class="table__body-cell table__body-cell--first">Global Park Part 1</td>
+                                <td class="table__body-cell">United States, California, Palo Alto</td>
+                                <td class="table__body-cell">PST</td>
+                                <td class="table__body-cell">24</td>
+                            </tr>
+                            <tr class="table__body-tr">
+                                <td class="table__body-cell table__body-cell--first">Global Park Part 2</td>
+                                <td class="table__body-cell">United States, California, Palo Alto</td>
+                                <td class="table__body-cell">PST</td>
+                                <td class="table__body-cell">2</td>
+                            </tr>
+                            <tr class="table__body-tr">
+                                <td class="table__body-cell table__body-cell--first">Global Park Part 3</td>
+                                <td class="table__body-cell">United States, California, Palo Alto</td>
+                                <td class="table__body-cell">PST</td>
+                                <td class="table__body-cell">2001</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <form class="search">
+                        <input class="search__field" type="text" placeholder="Search...">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
