@@ -1,45 +1,37 @@
 /*Main Styles*/
 .crews {
-    height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 25px;
-}
-
-.crews__inner {
-    max-width: 1440px;
-    width: 100%;
-    max-height: 900px;
-    height: 100%;
-    display: flex;
-    border-radius: 16px;
-    overflow: hidden;
 }
 
 /*Left Side*/
-.left-side {
+.panel {
     display: flex;
     flex-direction: column;
     background-color: #1e1b1b;
     color: #fff;
-    max-width: 269px;
-    width: 100%;
+    min-width: 269px;
     padding: 37px 21px 24px 24px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
 }
 
-.top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.panel__logo {
     margin-bottom: 48px;
 }
 
-.top-logo {
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo__link {
     width: 95px;
 }
 
-.top-logo__img {
+.logo__img {
     display: block;
     width: 100%;
     height: 28px;
@@ -76,7 +68,7 @@
 }
 
 .share-select::after {
-    content: url(../../../crews/app/images/crew/left-side/arrow-select.png);
+    content: url(../images/crew/sprite/arrow-down.svg);
     background-color: #3c3939;
     display: block;
     position: absolute;
@@ -89,7 +81,7 @@
     padding: 9px 7px;
 }
 
-.navigation {
+.panel__navigation {
     margin-bottom: auto;
 }
 
@@ -121,12 +113,14 @@
     letter-spacing: -0.5px;
 }
 
+.panel__questions {
+    margin-bottom: 48px;
+}
+
 .questions {
-    height: 118px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 4px;
-    margin-bottom: 48px;
-    padding: 16px 8px 16px 16px;
+    padding: 17px 8px 17px 16px;
 }
 
 .questions__header {
@@ -139,6 +133,16 @@
 .questions__header-title {
     font-size: 14px;
     letter-spacing: -0.5px;
+}
+
+.questions__header-tooltip {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.questions__header-tooltip-icon {
+    width: 24px;
+    height: 24px;
 }
 
 .questions__box-item {
@@ -184,6 +188,10 @@
     letter-spacing: -0.5px;
 }
 
+.profile__user, .profile__user-name {
+    display: block;
+}
+
 .profile__user-surname {
     font-size: 12px;
     line-height: 18px;
@@ -195,13 +203,26 @@
     cursor: pointer;
 }
 
+.profile__arrow-icon {
+    width: 12px;
+    height: 7px;
+}
+
 /*Content*/
+.crews__content {
+    margin-left: 269px;
+}
+
 .content {
     background-color: #fff;
     color: #1e1b1b;
-    max-width: 1171px;
     width: 100%;
+    min-height: 100vh;
     padding: 36px;
+}
+
+.content__projects-header {
+    margin-bottom: 17px;
 }
 
 .projects-header {
@@ -209,7 +230,6 @@
     justify-content: space-between;
     align-items: center;
     min-height: 48px;
-    margin-bottom: 17px;
 }
 
 .projects-header__title {
@@ -224,14 +244,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 166px;
-    padding: 14px 29px 14px;
+    padding: 14px 32px 14px;
     font-size: 14px;
     letter-spacing: -0.5px;
 }
 
 .projects-header__btn-icon {
     margin-right: 12px;
+    width: 21px;
+    height: 21px;
 }
 
 .projects-content {
@@ -239,34 +260,41 @@
     justify-content: space-between;
 }
 
-.table {
-    max-width: 818px;
-    width: 100%;
-    font-size: 12px;
-    text-align: left;
+.projects-content__table {
+    margin-right: 27px;
 }
 
-.table__header-cell {
+.table {
+    flex-grow: 1;
+}
+
+.table-inner {
+    width: 100%; 
+    font-size: 12px;
+    text-align: left; 
+}
+
+.table-inner__header-cell {
     background-color: #F5F5F5;
     padding: 12px 26px 12px 16px;
 }
 
-.table__header-cell--rounded-left {
+.table-inner__header-cell--rounded-left {
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
 }
 
-.table__header-cell--rounded-right {
+.table-inner__header-cell--rounded-right {
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
 } 
 
-.table__body-cell {
+.table-inner__body-cell {
     background-color: #fff;
     padding: 12px 26px 12px 16px;
 }
 
-.table__body-cell--first {
+.table-inner__body-cell--first {
     font-weight: 600;
 }
 
@@ -279,6 +307,7 @@
     padding: 16px 12px;
     border: 4px solid #DEDEDE;
     height: 80px;
+    flex-shrink: 0;
 }
 
 .search__field {
@@ -292,7 +321,7 @@
 }
 
 .search::after {
-    content: url(../../../crews/app/images/crew/content/search.png);
+    content: url(../images/crew/sprite/search.svg);
     position: absolute;
     display: block;
     width: 12px;

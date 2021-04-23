@@ -57,7 +57,7 @@ a {
 }
 
 button {
-    cursor: pointer;
+    border: none;
     outline: transparent;
     padding: 0px;
 }

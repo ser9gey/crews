@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,133 +8,164 @@
     <!--Fonts-->
     <link rel="stylesheet" href="fonts/graphik-lcg/stylesheet.css">
     <!--Reset CSS-->
-    <link rel="stylesheet" href="../../crews/app/css/reset.css">
+    <link rel="stylesheet" href="css/reset.css">
     <!--Styles CSS-->
-    <link rel="stylesheet" href="../../crews/app/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Crews</title>
 </head>
 
+<svg style="display: none" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="arrow-up" viewBox="0 0 12 7">
+        <path
+            d="M5.28 0.22C5.42052 0.0793075 5.61116 0.000175052 5.81 0H6.19C6.38842 0.00230401 6.57828 0.081116 6.72001 0.22L11.85 5.36C11.9447 5.45388 11.9979 5.58168 11.9979 5.715C11.9979 5.84832 11.9447 5.97612 11.85 6.07L11.14 6.78C11.0478 6.87406 10.9217 6.92707 10.79 6.92707C10.6583 6.92707 10.5322 6.87406 10.44 6.78L6 2.33L1.56 6.78C1.46612 6.87466 1.33832 6.9279 1.205 6.9279C1.07169 6.9279 0.943888 6.87466 0.850005 6.78L0.150005 6.07C0.0553486 5.97612 0.00210571 5.84832 0.00210571 5.715C0.00210571 5.58168 0.0553486 5.45388 0.150005 5.36L5.28 0.22Z"
+            fill="white" />
+    </symbol>
+
+    <symbol id="tooltip" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="24" height="24" rx="12" fill="#1E1B1B" fill-opacity="0.9" />
+        <g opacity="0.5">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M5.33334 12C5.33334 8.3181 8.31811 5.33333 12 5.33333C13.7681 5.33333 15.4638 6.03571 16.7141 7.28595C17.9643 8.53619 18.6667 10.2319 18.6667 12C18.6667 15.6819 15.6819 18.6667 12 18.6667C8.31811 18.6667 5.33334 15.6819 5.33334 12ZM6.66668 12C6.66668 14.9455 9.05449 17.3333 12 17.3333C13.4145 17.3333 14.7711 16.7714 15.7712 15.7712C16.7714 14.771 17.3333 13.4145 17.3333 12C17.3333 9.05448 14.9455 6.66666 12 6.66666C9.05449 6.66666 6.66668 9.05448 6.66668 12ZM11.6667 14.6667C11.4826 14.6667 11.3333 14.8159 11.3333 15V15.6667C11.3333 15.8508 11.4826 16 11.6667 16H12.3333C12.5174 16 12.6667 15.8508 12.6667 15.6667V15C12.6667 14.8159 12.5174 14.6667 12.3333 14.6667H11.6667ZM12.6667 8.07999C13.7271 8.07999 14.5867 8.93961 14.5867 9.99999L14.6333 10.3733C14.6277 11.204 14.0903 11.9375 13.3 12.1933L12.6667 12.4C12.6239 12.4032 12.5899 12.4372 12.5867 12.48V13C12.5867 13.1841 12.4374 13.3333 12.2533 13.3333H11.7467C11.5626 13.3333 11.4133 13.1841 11.4133 13V12.48C11.4148 11.9406 11.7612 11.4626 12.2733 11.2933L12.9067 11.0867C13.2105 10.9814 13.414 10.6949 13.4133 10.3733V9.99999C13.4133 9.58762 13.079 9.25333 12.6667 9.25333H11.3333C11.1353 9.25333 10.9454 9.33199 10.8054 9.47202C10.6653 9.61205 10.5867 9.80197 10.5867 9.99999V10.3333C10.5867 10.5174 10.4374 10.6667 10.2533 10.6667H9.74668C9.56258 10.6667 9.41334 10.5174 9.41334 10.3333V9.99999C9.41334 8.93961 10.273 8.07999 11.3333 8.07999H12.6667Z"
+                fill="white" />
+        </g>
+    </symbol>
+
+    <symbol id="plus" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M12.5 2C6.97715 2 2.5 6.47715 2.5 12C2.5 17.5228 6.97715 22 12.5 22C18.0228 22 22.5 17.5228 22.5 12C22.5 9.34784 21.4464 6.8043 19.5711 4.92893C17.6957 3.05357 15.1522 2 12.5 2ZM12.5 20C8.08172 20 4.5 16.4183 4.5 12C4.5 7.58172 8.08172 4 12.5 4C16.9183 4 20.5 7.58172 20.5 12C20.5 14.1217 19.6571 16.1566 18.1569 17.6569C16.6566 19.1571 14.6217 20 12.5 20ZM13.5 11H16C16.2761 11 16.5 11.2239 16.5 11.5V12.5C16.5 12.7761 16.2761 13 16 13H13.5V15.5C13.5 15.7761 13.2761 16 13 16H12C11.7239 16 11.5 15.7761 11.5 15.5V13H9C8.72386 13 8.5 12.7761 8.5 12.5V11.5C8.5 11.2239 8.72386 11 9 11H11.5V8.5C11.5 8.22386 11.7239 8 12 8H13C13.2761 8 13.5 8.22386 13.5 8.5V11Z"
+            fill="white" />
+    </symbol>
+</svg>
+
 <body>
     <div class="crews">
-        <div class="crews__inner">
-            <div class="left-side">
-                <div class="top">
-                    <a class="top-logo" href="#">
-                        <img class="top-logo__img" src="../../crews/app/images/crew/left-side/logo.png" alt="logo">
-                      
-                    </a>
-                    <div class="share-select">
-                        <select class="select">
-                            <option class="select__option">CAH</option>
-                            <option class="select__option">TSL</option>
-                        </select>
-                    </div>
-                </div>
-                <nav class="navigation">
-                    <ul class="navigation__list">
-                        <li class="navigation__item">
-                            <a class="navigation__link" href="#">Tasks</a>
-                            <ul class="navigation-submenu">
-                                <li class="navigation-submenu__item">
-                                    <a class="navigation-submenu__link" href="#">Active Tasks</a>
-                                </li>
-                                <li class="navigation-submenu__item">
-                                    <a class="navigation-submenu__link" href="#">Archived</a>
-                                </li>
-                                <li class="navigation-submenu__item">
-                                    <a class="navigation-submenu__link" href="#">Deleted</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="navigation__item">
-                            <a class="navigation__link" href="#">Workers</a>
-                        </li>
-                        <li class="navigation__item">
-                            <a class="navigation__link navigation__link--active" href="#">Projects</a>
-                        </li>
-                        <li class="navigation__item">
-                            <a class="navigation__link" href="#">Reports</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="questions" style="background: url('../../crews/app/images/crew/left-side/questions.png')no-repeat top center / cover">
-                    <div class="questions__header">
-                        <h3 class="questions__header-title">Have questions?</h3>
-                        <img class="questions__header-tooltip-icon" src="../../crews/app/images/crew/left-side/tooltip-icon.png" alt="tooltip-icon">
-                    </div>
-                    <div class="questions__box">
-                        <ul class="questions__box-inner">
-                            <li class="questions__box-item">
-                                Check our
-                                <a class="questions__box-link" href="#">FAQ's</a>
-                            </li>
-                            <li class="questions__box-item">
-                                Watch demo video
-                                <a class="questions__box-link" href="#">here</a>
-                            </li>
-                            <li class="questions__box-item">
-                                or contact us at by
-                                <a class="questions__box-link" href="#">email</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="profile">
-                    <div class="profile__logo">
-                        <img class="profile__ava" src="../../crews/app/images/crew/left-side/ava.png" alt="ava">
-                    </div>
-                    <div class="profile__user">
-                        <p class="profile__user-name">Marvin McKinney</p>
-                        <p class="profile__user-surname">Cahill</p>
-                    </div>
-                    <div class="profile__arrow">
-                        <img class="profile__arrow-icon" src="../../crews/app/images/crew/left-side/arrow-profile.png" alt="arrow"></img>
-                    </div>
+        <div class="panel">
+            <div class="panel__logo logo">
+                <a class="logo__link" href="#">
+                    <img class="logo__img" src="images/crew/left-side/logo.png" alt="logo">
+                </a>
+                <div class="share-select">
+                    <select class="select">
+                        <option class="select__option">CAH</option>
+                        <option class="select__option">TSL</option>
+                    </select>
                 </div>
             </div>
-            <div class="content">
-                <div class="projects-header">
-                    <h1 class="projects-header__title">Projects</h1>
-                    <button class="projects-header__btn">
-                        <img class="projects-header__btn-icon" src="../../crews/app/images/crew/content/plus.png" alt="plus">
-                        <p class="projects-header__btn-text">New Project</p>
+            <nav class="panel__navigation navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">Tasks</a>
+                        <ul class="navigation-submenu">
+                            <li class="navigation-submenu__item">
+                                <a class="navigation-submenu__link" href="#">Active Tasks</a>
+                            </li>
+                            <li class="navigation-submenu__item">
+                                <a class="navigation-submenu__link" href="#">Archived</a>
+                            </li>
+                            <li class="navigation-submenu__item">
+                                <a class="navigation-submenu__link" href="#">Deleted</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">Workers</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link navigation__link--active" href="#">Projects</a>
+                    </li>
+                    <li class="navigation__item">
+                        <a class="navigation__link" href="#">Reports</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="panel__questions questions"
+                style="background: url('images/crew/left-side/questions.png')no-repeat top center / cover">
+                <div class="questions__header">
+                    <h3 class="questions__header-title">Have questions?</h3>
+                    <button class="questions__header-tooltip">
+                        <svg class="questions__header-tooltip-icon">
+                            <use xlink:href="#tooltip"></use>
+                        </svg>
                     </button>
                 </div>
-                <div class="projects-content">
-                    <table class="table">
-                        <thead class="table__header">
-                            <tr class="table__header-tr">
-                                <th class="table__header-cell table__header-cell--rounded-left">Name</th>
-                                <th class="table__header-cell">Location</th>
-                                <th class="table__header-cell">Timezone</th>
-                                <th class="table__header-cell table__header-cell--rounded-right">Tasks</th>
+                <div class="questions__box">
+                    <ul class="questions__box-inner">
+                        <li class="questions__box-item">
+                            Check our
+                            <a class="questions__box-link" href="#">FAQ's</a>
+                        </li>
+                        <li class="questions__box-item">
+                            Watch demo video
+                            <a class="questions__box-link" href="#">here</a>
+                        </li>
+                        <li class="questions__box-item">
+                            or contact us at by
+                            <a class="questions__box-link" href="#">email</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="profile">
+                <div class="profile__logo">
+                    <img class="profile__ava" src="images/crew/left-side/ava.png" alt="ava">
+                </div>
+                <div class="profile__user">
+                    <span class="profile__user-name">Marvin McKinney</span>
+                    <span class="profile__user-surname">Cahill</span>
+                </div>
+                <div class="profile__arrow">
+                    <svg class="profile__arrow-icon">
+                        <use xlink:href="#arrow-up"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+        <div class="crews__content content">
+            <div class="content__projects-header projects-header">
+                <h1 class="projects-header__title">Projects</h1>
+                <button class="projects-header__btn">
+                    <svg class="projects-header__btn-icon">
+                        <use xlink:href="#plus"></use>
+                    </svg>
+                    <p class="projects-header__btn-text">New Project</p>
+                </button>
+            </div>
+            <div class="projects-content">
+                <div class="projects-content__table table">
+                    <table class="table__inner table-inner">
+                        <thead class="table-inner__header">
+                            <tr class="table-inner__header-tr">
+                                <th class="table-inner__header-cell table-inner__header-cell--rounded-left">Name</th>
+                                <th class="table-inner__header-cell">Location</th>
+                                <th class="table-inner__header-cell">Timezone</th>
+                                <th class="table-inner__header-cell table-inner__header-cell--rounded-right">Tasks</th>
                             </tr>
                         </thead>
-                        <tbody class="table__body">
-                            <tr class="table__body-tr">
-                                <td class="table__body-cell table__body-cell--first">Global Park Part 1</td>
-                                <td class="table__body-cell">United States, California, Palo Alto</td>
-                                <td class="table__body-cell">PST</td>
-                                <td class="table__body-cell">24</td>
+                        <tbody class="table-inner__body">
+                            <tr class="table-inner__body-tr">
+                                <td class="table-inner__body-cell table-inner__body-cell--first">Global Park Part 1</td>
+                                <td class="table-inner__body-cell">United States, California, Palo Alto</td>
+                                <td class="table-inner__body-cell">PST</td>
+                                <td class="table-inner__body-cell">24</td>
                             </tr>
-                            <tr class="table__body-tr">
-                                <td class="table__body-cell table__body-cell--first">Global Park Part 2</td>
-                                <td class="table__body-cell">United States, California, Palo Alto</td>
-                                <td class="table__body-cell">PST</td>
-                                <td class="table__body-cell">2</td>
+                            <tr class="table-inner__body-tr">
+                                <td class="table-inner__body-cell table-inner__body-cell--first">Global Park Part 2</td>
+                                <td class="table-inner__body-cell">United States, California, Palo Alto</td>
+                                <td class="table-inner__body-cell">PST</td>
+                                <td class="table-inner__body-cell">2</td>
                             </tr>
-                            <tr class="table__body-tr">
-                                <td class="table__body-cell table__body-cell--first">Global Park Part 3</td>
-                                <td class="table__body-cell">United States, California, Palo Alto</td>
-                                <td class="table__body-cell">PST</td>
-                                <td class="table__body-cell">2001</td>
+                            <tr class="table-inner__body-tr">
+                                <td class="table-inner__body-cell table-inner__body-cell--first">Global Park Part 3</td>
+                                <td class="table-inner__body-cell">United States, California, Palo Alto</td>
+                                <td class="table-inner__body-cell">PST</td>
+                                <td class="table-inner__body-cell">2001</td>
                             </tr>
                         </tbody>
                     </table>
-                    <form class="search">
-                        <input class="search__field" type="text" placeholder="Search...">
-                    </form>
                 </div>
+                <form class="search">
+                    <input class="search__field" type="text" placeholder="Search...">
+                </form>
             </div>
         </div>
     </div>
