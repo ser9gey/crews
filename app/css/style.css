@@ -9,12 +9,32 @@
     flex-direction: column;
     background-color: #1e1b1b;
     color: #fff;
-    min-width: 269px;
+    width: 269px;
     padding: 37px 21px 24px 24px;
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
+    overflow-y: auto;
+}
+
+.panel::-webkit-scrollbar {
+    width: 3px;
+}
+
+.panel::-webkit-scrollbar-track {
+    background: #1e1b1b;
+    border-radius: 5px;
+}
+
+.panel::-webkit-scrollbar-thumb {
+    background: linear-gradient(transparent, #fa380d, transparent);
+    border-radius: 2px;
+}
+
+.panel {
+    scrollbar-color: #fa380d #1e1b1b;
+    scrollbar-width: thin;
 }
 
 .panel__logo {
@@ -121,6 +141,7 @@
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 4px;
     padding: 17px 8px 17px 16px;
+    background: no-repeat top center / cover;
 }
 
 .questions__header {
@@ -170,6 +191,7 @@
     width: 36px;
     height: 36px;
     margin-right: 16px;
+    flex-shrink: 0;
 }
 
 .profile__ava {
@@ -180,6 +202,7 @@
 
 .profile__user {
     margin-right: auto;
+    padding-right: 20px;
 }
 
 .profile__user-name {
@@ -190,6 +213,9 @@
 
 .profile__user, .profile__user-name {
     display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .profile__user-surname {
@@ -201,6 +227,7 @@
 .profile__arrow {
     margin-right: 8px;
     cursor: pointer;
+    flex-shrink: 0;
 }
 
 .profile__arrow-icon {
